@@ -1,5 +1,5 @@
 class SubscribersController < ApplicationController
-before_filter :aunthenticate_user!
+before_filter :authenticate_user!
 def new 
 
 end

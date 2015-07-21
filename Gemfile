@@ -17,7 +17,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'rails_12factor', group: :production
 gem 'acts_as_votable'
-
+gem 'simple_form'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
