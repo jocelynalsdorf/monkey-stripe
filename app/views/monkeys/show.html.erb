@@ -4,14 +4,21 @@
 
 		
 				<div class="col-lg-6">
-					<img class="responsive center-block" src="http://placehold.it/500x400" alt="monkey-picture">\
+					<div class="responsive center-block"> <%= image_tag @monkey.image.url(:medium) %></div
 					<h3><%= @monkey.title %></h3>
 					<h3><%= @monkey.age %></h3>
 					<h3><%= @monkey.gender %></h3>
 					<h3><%= @monkey.story %></h3>
 				</div>
-			<% end %>
+	
 
-		<button class="btn btn-primary"><%= link_to 'Add a Monkey', new_monkey_path, id: "new_link" %></button>
+<button class="btn btn-primary"><%= link_to 'Add a Monkey', new_monkey_path, id: "new_link" %></button>
 	</div>
 </div>
+
+
+<button class="btn btn-primary"><%= link_to "Edit", edit_monkey_path(@monkey) %></button>
+
+<button class="btn btn-primary"><%= link_to "Delete", monkey_path(@monkey), 
+method: 
+													:delete, data: {confirm: "Are you sure?"} %></button>

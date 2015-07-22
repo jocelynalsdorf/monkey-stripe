@@ -21,6 +21,7 @@ gem 'simple_form'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 
+
 group :development do
   gem 'byebug'
   gem 'web-console'

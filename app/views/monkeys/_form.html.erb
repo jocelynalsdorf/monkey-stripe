@@ -1,6 +1,7 @@
 <%= render "layouts/errors", :object => @monkey %>
 
-<%= form_for @monkey  do |f| %>
+<%= form_for @monkey, :url => monkeys_path, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :image%>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :age %>

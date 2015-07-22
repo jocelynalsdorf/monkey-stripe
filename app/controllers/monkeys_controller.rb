@@ -45,7 +45,7 @@ class MonkeysController < ActionController::Base
 
   private
   def monkey_params
-    params.require(:monkey).permit(:title, :age, :story, :gender)
+    params.require(:monkey).permit(:title, :age, :story, :gender, :image)
   end
 
 end

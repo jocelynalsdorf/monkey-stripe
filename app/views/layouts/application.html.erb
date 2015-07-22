@@ -23,7 +23,14 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">About <span class="sr-only"></span></a></li>
       </ul>
-     
+     <ul class="nav navbar-nav navbar-right">
+        <% if !user_signed_in? %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></a></li>
+        <li><%= link_to "Sign In",  new_user_session_path %></a></li>
+         <% else %>
+        <li class="session-info"><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </nav>

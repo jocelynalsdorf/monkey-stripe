@@ -4,7 +4,8 @@
 
 			<% @monkeys.each  do |monkey| %>
 				<div class="col-lg-4">
-					<img class="responsive center-block" src="http://placehold.it/200x200" alt="monkey-picture"><%= link_to monkey.title, monkey_path(monkey) %>
+				<%= image_tag monkey.image.url(:small) %>
+					<%= link_to monkey.title, monkey_path(monkey) %>
 				</div>
 			<% end %>
 
@@ -12,3 +13,4 @@
 	</div>
 		<button class="btn btn-primary"><%= link_to 'Add a Monkey', new_monkey_path, id: "new_link" %></button>
 </div>
+
